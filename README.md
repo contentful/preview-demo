@@ -16,7 +16,7 @@ From the Contentful web app go to  Space settings --> API keys....
 
 
 # Step 2
-Open project location and run "npm install" from your terminal.
+After downloading this repo, open the project's location on your computer and run "npm install" from your terminal.
 
 # Step 3
 After installing the dependencies run the "npm setup" command to configure the app.
