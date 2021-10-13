@@ -1,4 +1,4 @@
-# Next.js + Tailwind CSS + Contentful
+# Demo app for the “Setting up Content Previews” course By Contentful Learning Services.
 
 ## rough sketch ##
 > step 1 npm install  
