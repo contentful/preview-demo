@@ -21,7 +21,7 @@ Open project location and run "npm install" from your terminal.
 # Step 3
 After installing the dependencies run the "npm setup" command to configure the app.
 type in the keys at the prompt. 
-![enter image description here](https://lh3.googleusercontent.com/keep-bbsk/AGk0z-MLyXB-1klQHrwyad3K7M3-VoyqLBkYbo6FtSs-1D-13DoZmZ2oaFcou9Z5bPfjUhN2S2Aja2nUlX03Ycmeb9nNUpO6AmZIHvQ7srE=s587)
+**![](https://lh4.googleusercontent.com/gV77Phr6-Pg9z8VyKu4nvkN4Kq4r9BLLFUXfiFP4cBHyMB5mwCm0SzI9zQtfbygAAQMWt749G8XrFETx8Qs6UaxqkWnXtzH-lqvjCZv2vrT-0MmyXe3_MEPrWF5aSxguOposws2y=s0)**
 
 
 # Step 4
