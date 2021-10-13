@@ -1,0 +1,2305 @@
+{
+    "contentTypes": [{
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "author",
+                "type": "ContentType",
+                "createdAt": "2021-07-21T10:57:44.424Z",
+                "updatedAt": "2021-07-21T10:57:48.101Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 1,
+                "publishedAt": "2021-07-21T10:57:48.101Z",
+                "firstPublishedAt": "2021-07-21T10:57:48.101Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 1,
+                "version": 2,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                }
+            },
+            "displayField": "name",
+            "name": "Author",
+            "description": "",
+            "fields": [{
+                    "id": "name",
+                    "name": "Name",
+                    "type": "Symbol",
+                    "localized": false,
+                    "required": true,
+                    "validations": [],
+                    "disabled": false,
+                    "omitted": false
+                },
+                {
+                    "id": "picture",
+                    "name": "Picture",
+                    "type": "Link",
+                    "localized": false,
+                    "required": true,
+                    "validations": [],
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Asset"
+                }
+            ]
+        },
+        {
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "post",
+                "type": "ContentType",
+                "createdAt": "2021-07-21T10:57:44.424Z",
+                "updatedAt": "2021-07-23T12:31:50.462Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 5,
+                "publishedAt": "2021-07-23T12:31:50.462Z",
+                "firstPublishedAt": "2021-07-21T10:57:48.903Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 3,
+                "version": 6,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                }
+            },
+            "displayField": "title",
+            "name": "Post",
+            "description": "",
+            "fields": [{
+                    "id": "title",
+                    "name": "Title",
+                    "type": "Symbol",
+                    "localized": true,
+                    "required": true,
+                    "validations": [],
+                    "disabled": false,
+                    "omitted": false
+                },
+                {
+                    "id": "slug",
+                    "name": "Slug",
+                    "type": "Symbol",
+                    "localized": false,
+                    "required": true,
+                    "validations": [],
+                    "disabled": false,
+                    "omitted": false
+                },
+                {
+                    "id": "content",
+                    "name": "Content",
+                    "type": "RichText",
+                    "localized": true,
+                    "required": true,
+                    "validations": [{
+                        "nodes": {}
+                    }],
+                    "disabled": false,
+                    "omitted": false
+                },
+                {
+                    "id": "excerpt",
+                    "name": "Excerpt",
+                    "type": "Symbol",
+                    "localized": false,
+                    "required": true,
+                    "validations": [],
+                    "disabled": false,
+                    "omitted": false
+                },
+                {
+                    "id": "coverImage",
+                    "name": "Cover Image",
+                    "type": "Link",
+                    "localized": false,
+                    "required": true,
+                    "validations": [],
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Asset"
+                },
+                {
+                    "id": "date",
+                    "name": "Date",
+                    "type": "Date",
+                    "localized": false,
+                    "required": true,
+                    "validations": [],
+                    "disabled": false,
+                    "omitted": false
+                },
+                {
+                    "id": "author",
+                    "name": "Author",
+                    "type": "Link",
+                    "localized": false,
+                    "required": true,
+                    "validations": [{
+                        "linkContentType": [
+                            "author"
+                        ]
+                    }],
+                    "disabled": false,
+                    "omitted": false,
+                    "linkType": "Entry"
+                },
+                {
+                    "id": "externalUrl",
+                    "name": "externalURL",
+                    "type": "Symbol",
+                    "localized": false,
+                    "required": false,
+                    "validations": [],
+                    "disabled": false,
+                    "omitted": false
+                }
+            ]
+        }
+    ],
+    "tags": [],
+    "editorInterfaces": [{
+            "sys": {
+                "id": "default",
+                "type": "EditorInterface",
+                "space": {
+                    "sys": {
+                        "id": "r29ooy383j6e",
+                        "type": "Link",
+                        "linkType": "Space"
+                    }
+                },
+                "version": 2,
+                "createdAt": "2021-07-21T10:57:48.436Z",
+                "createdBy": {
+                    "sys": {
+                        "id": "0LxJB4LBv007oHgJD7WvJN",
+                        "type": "Link",
+                        "linkType": "User"
+                    }
+                },
+                "updatedAt": "2021-07-21T10:57:49.514Z",
+                "updatedBy": {
+                    "sys": {
+                        "id": "0LxJB4LBv007oHgJD7WvJN",
+                        "type": "Link",
+                        "linkType": "User"
+                    }
+                },
+                "contentType": {
+                    "sys": {
+                        "id": "author",
+                        "type": "Link",
+                        "linkType": "ContentType"
+                    }
+                },
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                }
+            },
+            "controls": [{
+                    "fieldId": "name",
+                    "widgetId": "singleLine",
+                    "widgetNamespace": "builtin"
+                },
+                {
+                    "fieldId": "picture",
+                    "widgetId": "assetLinkEditor",
+                    "widgetNamespace": "builtin"
+                }
+            ]
+        },
+        {
+            "sys": {
+                "id": "default",
+                "type": "EditorInterface",
+                "space": {
+                    "sys": {
+                        "id": "r29ooy383j6e",
+                        "type": "Link",
+                        "linkType": "Space"
+                    }
+                },
+                "version": 6,
+                "createdAt": "2021-07-21T10:57:49.056Z",
+                "createdBy": {
+                    "sys": {
+                        "id": "0LxJB4LBv007oHgJD7WvJN",
+                        "type": "Link",
+                        "linkType": "User"
+                    }
+                },
+                "updatedAt": "2021-07-23T12:31:51.277Z",
+                "updatedBy": {
+                    "sys": {
+                        "id": "0LxJB4LBv007oHgJD7WvJN",
+                        "type": "Link",
+                        "linkType": "User"
+                    }
+                },
+                "contentType": {
+                    "sys": {
+                        "id": "post",
+                        "type": "Link",
+                        "linkType": "ContentType"
+                    }
+                },
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                }
+            },
+            "controls": [{
+                    "fieldId": "title",
+                    "widgetId": "singleLine",
+                    "widgetNamespace": "builtin"
+                },
+                {
+                    "fieldId": "slug",
+                    "widgetId": "slugEditor",
+                    "widgetNamespace": "builtin"
+                },
+                {
+                    "fieldId": "content",
+                    "widgetId": "richTextEditor",
+                    "widgetNamespace": "builtin"
+                },
+                {
+                    "fieldId": "excerpt",
+                    "widgetId": "singleLine",
+                    "widgetNamespace": "builtin"
+                },
+                {
+                    "fieldId": "coverImage",
+                    "widgetId": "assetLinkEditor",
+                    "widgetNamespace": "builtin"
+                },
+                {
+                    "fieldId": "date",
+                    "widgetId": "datePicker",
+                    "widgetNamespace": "builtin"
+                },
+                {
+                    "fieldId": "author",
+                    "widgetId": "entryLinkEditor",
+                    "widgetNamespace": "builtin"
+                },
+                {
+                    "fieldId": "externalUrl",
+                    "widgetId": "singleLine",
+                    "widgetNamespace": "builtin"
+                }
+            ]
+        }
+    ],
+    "entries": [{
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "g9noo7jIRinanS4m3oVGT",
+                "type": "Entry",
+                "createdAt": "2021-07-21T12:41:12.758Z",
+                "updatedAt": "2021-07-27T18:10:37.923Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 46,
+                "publishedAt": "2021-07-27T18:10:37.923Z",
+                "firstPublishedAt": "2021-07-21T12:50:27.786Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 10,
+                "version": 47,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "post"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "de-DE": " Was ist Contentful?",
+                    "en-US": "What is Contentful?"
+                },
+                "slug": {
+                    "en-US": "what-is-contentful"
+                },
+                "content": {
+                    "de-DE": {
+                        "data": {},
+                        "content": [{
+                                "data": {},
+                                "content": [{
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Erfahren Sie mehr zu diesem Thema in unserem Learning Center.\nVerwenden Sie den unten stehenden Link...",
+                                    "nodeType": "text"
+                                }],
+                                "nodeType": "paragraph"
+                            },
+                            {
+                                "data": {},
+                                "content": [{
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "",
+                                        "nodeType": "text"
+                                    },
+                                    {
+                                        "data": {
+                                            "uri": "https://training.contentful.com/student/activity/752249"
+                                        },
+                                        "content": [{
+                                            "data": {},
+                                            "marks": [],
+                                            "value": "https://training.contentful.com/student/activity/752249",
+                                            "nodeType": "text"
+                                        }],
+                                        "nodeType": "hyperlink"
+                                    },
+                                    {
+                                        "data": {},
+                                        "marks": [],
+                                        "value": ".",
+                                        "nodeType": "text"
+                                    }
+                                ],
+                                "nodeType": "paragraph"
+                            }
+                        ],
+                        "nodeType": "document"
+                    },
+                    "en-US": {
+                        "nodeType": "document",
+                        "data": {},
+                        "content": [{
+                                "nodeType": "paragraph",
+                                "content": [{
+                                    "nodeType": "text",
+                                    "value": "Find out more about this topic, visit our Learning Center. ",
+                                    "marks": [],
+                                    "data": {}
+                                }],
+                                "data": {}
+                            },
+                            {
+                                "nodeType": "paragraph",
+                                "content": [{
+                                        "nodeType": "text",
+                                        "value": "Use the link ",
+                                        "marks": [],
+                                        "data": {}
+                                    },
+                                    {
+                                        "nodeType": "text",
+                                        "value": "below",
+                                        "marks": [{
+                                            "type": "bold"
+                                        }],
+                                        "data": {}
+                                    },
+                                    {
+                                        "nodeType": "text",
+                                        "value": "...",
+                                        "marks": [],
+                                        "data": {}
+                                    }
+                                ],
+                                "data": {}
+                            },
+                            {
+                                "nodeType": "paragraph",
+                                "content": [{
+                                        "nodeType": "text",
+                                        "value": "",
+                                        "marks": [],
+                                        "data": {}
+                                    },
+                                    {
+                                        "nodeType": "hyperlink",
+                                        "content": [{
+                                            "nodeType": "text",
+                                            "value": "https://training.contentful.com/student/activity/752249",
+                                            "marks": [],
+                                            "data": {}
+                                        }],
+                                        "data": {
+                                            "uri": "https://training.contentful.com/student/activity/752249"
+                                        }
+                                    },
+                                    {
+                                        "nodeType": "text",
+                                        "value": ".",
+                                        "marks": [],
+                                        "data": {}
+                                    }
+                                ],
+                                "data": {}
+                            },
+                            {
+                                "nodeType": "paragraph",
+                                "content": [{
+                                    "nodeType": "text",
+                                    "value": "",
+                                    "marks": [{
+                                        "type": "underline"
+                                    }],
+                                    "data": {}
+                                }],
+                                "data": {}
+                            },
+                            {
+                                "nodeType": "paragraph",
+                                "content": [{
+                                    "nodeType": "text",
+                                    "value": "",
+                                    "marks": [],
+                                    "data": {}
+                                }],
+                                "data": {}
+                            }
+                        ]
+                    }
+                },
+                "excerpt": {
+                    "en-US": "What is Contentful?"
+                },
+                "coverImage": {
+                    "en-US": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "1Pgh9ZgL4bPQnE0CHtemGq"
+                        }
+                    }
+                },
+                "date": {
+                    "en-US": "2021-07-21T00:00+02:00"
+                },
+                "author": {
+                    "en-US": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "4UXltlk42vjVjXPsMITApb"
+                        }
+                    }
+                },
+                "externalUrl": {
+                    "en-US": "https://training.contentful.com/student/activity/752249"
+                }
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "4UXltlk42vjVjXPsMITApb",
+                "type": "Entry",
+                "createdAt": "2021-07-21T12:41:24.519Z",
+                "updatedAt": "2021-07-24T10:19:09.817Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 6,
+                "publishedAt": "2021-07-24T10:19:09.817Z",
+                "firstPublishedAt": "2021-07-21T12:43:17.033Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 2,
+                "version": 7,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "author"
+                    }
+                }
+            },
+            "fields": {
+                "name": {
+                    "en-US": "Contentful Learning Services"
+                },
+                "picture": {
+                    "en-US": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "2k0SUxX6NZDzV1r40FuXxO"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "4CYBcZ1rya6dlE67EIzyrP",
+                "type": "Entry",
+                "createdAt": "2021-07-23T19:07:09.131Z",
+                "updatedAt": "2021-07-24T09:05:59.971Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 19,
+                "publishedAt": "2021-07-24T09:05:59.971Z",
+                "firstPublishedAt": "2021-07-23T19:13:13.521Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 2,
+                "version": 20,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "post"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "de-DE": "Bearbeitungsgrundlagen",
+                    "en-US": "Editing basics"
+                },
+                "slug": {
+                    "en-US": "editing-basics"
+                },
+                "content": {
+                    "de-DE": {
+                        "data": {},
+                        "content": [{
+                                "data": {},
+                                "content": [{
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "Wenn Sie mit Contentful gerade erst anfangen und lernen möchten, wie Sie Text bearbeiten, Assets verwalten und Inhalte veröffentlichen, erfahren Sie es in diesem Video. Auch wenn Sie einen Blick in die Web-App werfen möchten, finden Sie sie hier!\nUm mehr zu diesem Thema zu erfahren, besuchen Sie unser Learning Center.\nVerwenden Sie den unten stehenden Link...",
+                                    "nodeType": "text"
+                                }],
+                                "nodeType": "paragraph"
+                            },
+                            {
+                                "data": {},
+                                "content": [{
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "",
+                                        "nodeType": "text"
+                                    },
+                                    {
+                                        "data": {
+                                            "uri": "https://training.contentful.com/student/activity/752247"
+                                        },
+                                        "content": [{
+                                            "data": {},
+                                            "marks": [],
+                                            "value": "LINK",
+                                            "nodeType": "text"
+                                        }],
+                                        "nodeType": "hyperlink"
+                                    },
+                                    {
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "",
+                                        "nodeType": "text"
+                                    }
+                                ],
+                                "nodeType": "paragraph"
+                            }
+                        ],
+                        "nodeType": "document"
+                    },
+                    "en-US": {
+                        "data": {},
+                        "content": [{
+                                "data": {},
+                                "content": [{
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "If you’re just getting started using Contentful and want to learn how to edit text, manage assets and publish content, you’ll find out in this video. Also, if you want to have a peek into the web app, you’ll find it here!",
+                                    "nodeType": "text"
+                                }],
+                                "nodeType": "paragraph"
+                            },
+                            {
+                                "data": {},
+                                "content": [{
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "To Find out more about this topic, visit our Learning Center.",
+                                    "nodeType": "text"
+                                }],
+                                "nodeType": "paragraph"
+                            },
+                            {
+                                "data": {},
+                                "content": [{
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "Use the link ",
+                                        "nodeType": "text"
+                                    },
+                                    {
+                                        "data": {},
+                                        "marks": [{
+                                            "type": "bold"
+                                        }],
+                                        "value": "below",
+                                        "nodeType": "text"
+                                    },
+                                    {
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "...",
+                                        "nodeType": "text"
+                                    }
+                                ],
+                                "nodeType": "paragraph"
+                            },
+                            {
+                                "data": {},
+                                "content": [{
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "",
+                                        "nodeType": "text"
+                                    },
+                                    {
+                                        "data": {
+                                            "uri": "https://training.contentful.com/student/activity/752247"
+                                        },
+                                        "content": [{
+                                            "data": {},
+                                            "marks": [],
+                                            "value": "LINK",
+                                            "nodeType": "text"
+                                        }],
+                                        "nodeType": "hyperlink"
+                                    },
+                                    {
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "",
+                                        "nodeType": "text"
+                                    }
+                                ],
+                                "nodeType": "paragraph"
+                            },
+                            {
+                                "data": {},
+                                "content": [{
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "",
+                                    "nodeType": "text"
+                                }],
+                                "nodeType": "paragraph"
+                            }
+                        ],
+                        "nodeType": "document"
+                    }
+                },
+                "excerpt": {
+                    "en-US": "learn how to edit text, manage assets and publish content"
+                },
+                "coverImage": {
+                    "en-US": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "5KZgmmyuaWNchHDaatyM6t"
+                        }
+                    }
+                },
+                "date": {
+                    "en-US": "2021-07-23T00:00+02:00"
+                },
+                "author": {
+                    "en-US": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "4UXltlk42vjVjXPsMITApb"
+                        }
+                    }
+                },
+                "externalUrl": {
+                    "en-US": "https://training.contentful.com/student/activity/752247"
+                }
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "7wAlZkHUUCA3XXsiAJ0ZkZ",
+                "type": "Entry",
+                "createdAt": "2021-07-24T09:28:38.589Z",
+                "updatedAt": "2021-07-24T09:32:30.808Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 9,
+                "publishedAt": "2021-07-24T09:32:30.808Z",
+                "firstPublishedAt": "2021-07-24T09:32:30.808Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 1,
+                "version": 10,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "post"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "de-DE": "Compose",
+                    "en-US": "Compose"
+                },
+                "slug": {
+                    "en-US": "compose"
+                },
+                "content": {
+                    "de-DE": {
+                        "data": {},
+                        "content": [{
+                                "data": {},
+                                "content": [{
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "In diesem Video nimmt Sie Liz Osterloh von Contentful mit auf eine Tour durch Compose, die neue App von Contentful, mit der Redakteure Seiten erstellen und Inhalte verwalten können. Compose bietet Redakteuren eine schlankere und seitenorientiertere Benutzeroberfläche, während strukturierte Inhalte immer noch ihre Magie unter der Haube entfalten, sodass Sie Inhalte einmal erstellen und überall veröffentlichen können.\nVerwenden Sie den unten stehenden Link...",
+                                    "nodeType": "text"
+                                }],
+                                "nodeType": "paragraph"
+                            },
+                            {
+                                "data": {},
+                                "content": [{
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "",
+                                        "nodeType": "text"
+                                    },
+                                    {
+                                        "data": {
+                                            "uri": "https://training.contentful.com/student/activity/784399-the-studio-compose"
+                                        },
+                                        "content": [{
+                                            "data": {},
+                                            "marks": [],
+                                            "value": "LINK",
+                                            "nodeType": "text"
+                                        }],
+                                        "nodeType": "hyperlink"
+                                    },
+                                    {
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "",
+                                        "nodeType": "text"
+                                    }
+                                ],
+                                "nodeType": "paragraph"
+                            }
+                        ],
+                        "nodeType": "document"
+                    },
+                    "en-US": {
+                        "data": {},
+                        "content": [{
+                                "data": {},
+                                "content": [{
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "In this video, Contentful's Liz Osterloh takes you for a spin around Compose, Contentful's new app for editors to create pages and manage content. Compose gives editors a sleeker and more page-centric interface while structured content still works its magic under the hood, letting you create content once and publish it anywhere.",
+                                    "nodeType": "text"
+                                }],
+                                "nodeType": "paragraph"
+                            },
+                            {
+                                "data": {},
+                                "content": [{
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "Use the link ",
+                                        "nodeType": "text"
+                                    },
+                                    {
+                                        "data": {},
+                                        "marks": [{
+                                            "type": "bold"
+                                        }],
+                                        "value": "below",
+                                        "nodeType": "text"
+                                    },
+                                    {
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "...",
+                                        "nodeType": "text"
+                                    }
+                                ],
+                                "nodeType": "paragraph"
+                            },
+                            {
+                                "data": {},
+                                "content": [{
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "",
+                                        "nodeType": "text"
+                                    },
+                                    {
+                                        "data": {
+                                            "uri": "https://training.contentful.com/student/activity/784399-the-studio-compose"
+                                        },
+                                        "content": [{
+                                            "data": {},
+                                            "marks": [],
+                                            "value": "LINK",
+                                            "nodeType": "text"
+                                        }],
+                                        "nodeType": "hyperlink"
+                                    },
+                                    {
+                                        "data": {},
+                                        "marks": [],
+                                        "value": "",
+                                        "nodeType": "text"
+                                    }
+                                ],
+                                "nodeType": "paragraph"
+                            },
+                            {
+                                "data": {},
+                                "content": [{
+                                    "data": {},
+                                    "marks": [],
+                                    "value": "",
+                                    "nodeType": "text"
+                                }],
+                                "nodeType": "paragraph"
+                            }
+                        ],
+                        "nodeType": "document"
+                    }
+                },
+                "excerpt": {
+                    "en-US": "learn how to edit text, manage assets and publish content"
+                },
+                "coverImage": {
+                    "en-US": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Asset",
+                            "id": "1FCUHSvwBzyAzJQdylYTFv"
+                        }
+                    }
+                },
+                "date": {
+                    "en-US": "2021-07-23T00:00+02:00"
+                },
+                "author": {
+                    "en-US": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Entry",
+                            "id": "4UXltlk42vjVjXPsMITApb"
+                        }
+                    }
+                },
+                "externalUrl": {
+                    "en-US": "https://training.contentful.com/student/activity/784399-the-studio-compose"
+                }
+            }
+        }
+    ],
+    "assets": [{
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "4b4CchsYuPXOvEMAiNNmP",
+                "type": "Asset",
+                "createdAt": "2021-07-21T11:04:38.420Z",
+                "updatedAt": "2021-07-21T11:05:15.635Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 3,
+                "publishedAt": "2021-07-21T11:05:15.635Z",
+                "firstPublishedAt": "2021-07-21T11:05:15.635Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 1,
+                "version": 4,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "en-US": "cech5"
+                },
+                "file": {
+                    "en-US": {
+                        "url": "//images.ctfassets.net/r29ooy383j6e/4b4CchsYuPXOvEMAiNNmP/bd60b91eb2240d795b1c08be43308847/petr_cech.jpg",
+                        "details": {
+                            "size": 57864,
+                            "image": {
+                                "width": 405,
+                                "height": 640
+                            }
+                        },
+                        "fileName": "cech5",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "67i1ObIduMcQf07oiben1c",
+                "type": "Asset",
+                "createdAt": "2021-07-21T11:06:25.855Z",
+                "updatedAt": "2021-07-21T11:07:14.113Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 5,
+                "publishedAt": "2021-07-21T11:07:14.113Z",
+                "firstPublishedAt": "2021-07-21T11:07:14.113Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 1,
+                "version": 6,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "en-US": "goal keeping"
+                },
+                "file": {
+                    "en-US": {
+                        "url": "//images.ctfassets.net/r29ooy383j6e/67i1ObIduMcQf07oiben1c/778602a96bf78385ecec16dcb671432f/goal_keeper.jpg",
+                        "details": {
+                            "size": 149873,
+                            "image": {
+                                "width": 640,
+                                "height": 429
+                            }
+                        },
+                        "fileName": "Goal_Keeper",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "7pZqDcDGNkrnaPhHHdEqby",
+                "type": "Asset",
+                "createdAt": "2021-07-21T11:21:41.745Z",
+                "updatedAt": "2021-07-21T11:22:27.384Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 4,
+                "publishedAt": "2021-07-21T11:22:27.384Z",
+                "firstPublishedAt": "2021-07-21T11:22:27.384Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 1,
+                "version": 5,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "en-US": "jose"
+                },
+                "file": {
+                    "en-US": {
+                        "url": "//images.ctfassets.net/r29ooy383j6e/7pZqDcDGNkrnaPhHHdEqby/7ab5d1356b60599f1dde446bc544ce7b/mourinho.jpg",
+                        "details": {
+                            "size": 94713,
+                            "image": {
+                                "width": 640,
+                                "height": 426
+                            }
+                        },
+                        "fileName": "Jose-Mourinho-1901020",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "48hXFja7YCTx9nyO3fzdOn",
+                "type": "Asset",
+                "createdAt": "2021-07-21T12:42:33.474Z",
+                "updatedAt": "2021-07-21T12:43:08.798Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 6,
+                "publishedAt": "2021-07-21T12:43:08.798Z",
+                "firstPublishedAt": "2021-07-21T12:43:08.798Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 1,
+                "version": 7,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "en-US": "Contentful LS"
+                },
+                "description": {
+                    "en-US": "Contentful Learning Services Logo"
+                },
+                "file": {
+                    "en-US": {
+                        "url": "//images.ctfassets.net/r29ooy383j6e/48hXFja7YCTx9nyO3fzdOn/8632189dfe6b1c27828681a7b3be1e72/LearningCenter_logo_450x125_july_2021.png",
+                        "details": {
+                            "size": 15727,
+                            "image": {
+                                "width": 449,
+                                "height": 125
+                            }
+                        },
+                        "fileName": "LearningCenter_logo_450x125_july_2021.png",
+                        "contentType": "image/png"
+                    }
+                }
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "1Pgh9ZgL4bPQnE0CHtemGq",
+                "type": "Asset",
+                "createdAt": "2021-07-21T12:48:15.593Z",
+                "updatedAt": "2021-07-21T12:49:41.818Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 4,
+                "publishedAt": "2021-07-21T12:49:41.818Z",
+                "firstPublishedAt": "2021-07-21T12:49:41.818Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 1,
+                "version": 5,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "en-US": "contentful-intro"
+                },
+                "file": {
+                    "en-US": {
+                        "url": "//images.ctfassets.net/r29ooy383j6e/1Pgh9ZgL4bPQnE0CHtemGq/ecd3118f7b1195ab6eda3f052036fc10/contentful-intro.png",
+                        "details": {
+                            "size": 318416,
+                            "image": {
+                                "width": 699,
+                                "height": 397
+                            }
+                        },
+                        "fileName": "contentful-intro.png",
+                        "contentType": "image/png"
+                    }
+                }
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "5KZgmmyuaWNchHDaatyM6t",
+                "type": "Asset",
+                "createdAt": "2021-07-23T19:11:40.450Z",
+                "updatedAt": "2021-07-23T19:12:58.076Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 5,
+                "publishedAt": "2021-07-23T19:12:58.076Z",
+                "firstPublishedAt": "2021-07-23T19:12:58.076Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 1,
+                "version": 6,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "en-US": "editing-content"
+                },
+                "file": {
+                    "en-US": {
+                        "url": "//images.ctfassets.net/r29ooy383j6e/5KZgmmyuaWNchHDaatyM6t/bd0ca13a6d98112059463aad5b003cab/8B214789-6E7E-4014-BD70-1C80EF861B5D.jpeg",
+                        "details": {
+                            "size": 95278,
+                            "image": {
+                                "width": 703,
+                                "height": 392
+                            }
+                        },
+                        "fileName": "8B214789-6E7E-4014-BD70-1C80EF861B5D.jpeg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "1FCUHSvwBzyAzJQdylYTFv",
+                "type": "Asset",
+                "createdAt": "2021-07-24T09:31:39.534Z",
+                "updatedAt": "2021-07-24T09:32:23.713Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 6,
+                "publishedAt": "2021-07-24T09:32:23.713Z",
+                "firstPublishedAt": "2021-07-24T09:32:23.713Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 1,
+                "version": 7,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "en-US": "compose-image"
+                },
+                "file": {
+                    "en-US": {
+                        "url": "//images.ctfassets.net/r29ooy383j6e/1FCUHSvwBzyAzJQdylYTFv/a4aff4349a7bb773229fe18d7b4f93a5/compose.png",
+                        "details": {
+                            "size": 135144,
+                            "image": {
+                                "width": 689,
+                                "height": 397
+                            }
+                        },
+                        "fileName": "compose.png",
+                        "contentType": "image/png"
+                    }
+                }
+            }
+        },
+        {
+            "metadata": {
+                "tags": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "id": "2k0SUxX6NZDzV1r40FuXxO",
+                "type": "Asset",
+                "createdAt": "2021-07-24T10:18:42.664Z",
+                "updatedAt": "2021-07-24T10:19:04.034Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 4,
+                "publishedAt": "2021-07-24T10:19:04.034Z",
+                "firstPublishedAt": "2021-07-24T10:19:04.034Z",
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "publishedCounter": 1,
+                "version": 5,
+                "publishedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                }
+            },
+            "fields": {
+                "title": {
+                    "en-US": "contentful-logo"
+                },
+                "file": {
+                    "en-US": {
+                        "url": "//images.ctfassets.net/r29ooy383j6e/2k0SUxX6NZDzV1r40FuXxO/0d0a66c3a4c6de647a7379b9670133b4/2a_-_Contentful_logo_mark__dark_.png",
+                        "details": {
+                            "size": 8644,
+                            "image": {
+                                "width": 300,
+                                "height": 300
+                            }
+                        },
+                        "fileName": "2a+-+Contentful+logo+mark+(dark).png",
+                        "contentType": "image/png"
+                    }
+                }
+            }
+        }
+    ],
+    "locales": [{
+            "name": "German (Germany)",
+            "code": "de-DE",
+            "fallbackCode": "en-US",
+            "default": false,
+            "contentManagementApi": true,
+            "contentDeliveryApi": true,
+            "optional": false,
+            "sys": {
+                "type": "Locale",
+                "id": "3TyUYqkbiUFpiRfUZ9Z9iJ",
+                "version": 1,
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "environment": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Environment",
+                        "id": "master",
+                        "uuid": "45672139-54dd-48dc-9642-c8f4664f799e"
+                    }
+                },
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "createdAt": "2021-07-21T12:52:58Z",
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedAt": "2021-07-21T12:52:58Z"
+            }
+        },
+        {
+            "name": "English (United States)",
+            "code": "en-US",
+            "fallbackCode": null,
+            "default": true,
+            "contentManagementApi": true,
+            "contentDeliveryApi": true,
+            "optional": false,
+            "sys": {
+                "type": "Locale",
+                "id": "5YfVbAvyczkHln3nnrXzTm",
+                "version": 1,
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "environment": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Environment",
+                        "id": "master",
+                        "uuid": "45672139-54dd-48dc-9642-c8f4664f799e"
+                    }
+                },
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "createdAt": "2021-07-21T10:31:43Z",
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedAt": "2021-07-21T10:31:43Z"
+            }
+        }
+    ],
+    "webhooks": [],
+    "roles": [{
+            "name": "Freelancer",
+            "description": "Allows only editing of content they created themselves",
+            "policies": [{
+                    "effect": "allow",
+                    "actions": [
+                        "create"
+                    ],
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Entry"
+                            ]
+                        }]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "create"
+                    ],
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Asset"
+                            ]
+                        }]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "read"
+                    ],
+                    "constraint": {
+                        "and": [{
+                                "equals": [{
+                                        "doc": "sys.type"
+                                    },
+                                    "Entry"
+                                ]
+                            },
+                            {
+                                "equals": [{
+                                        "doc": "sys.createdBy.sys.id"
+                                    },
+                                    "User.current()"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "update"
+                    ],
+                    "constraint": {
+                        "and": [{
+                                "equals": [{
+                                        "doc": "sys.type"
+                                    },
+                                    "Entry"
+                                ]
+                            },
+                            {
+                                "equals": [{
+                                        "doc": "sys.createdBy.sys.id"
+                                    },
+                                    "User.current()"
+                                ]
+                            },
+                            {
+                                "paths": [{
+                                    "doc": "fields.%.%"
+                                }]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "delete"
+                    ],
+                    "constraint": {
+                        "and": [{
+                                "equals": [{
+                                        "doc": "sys.type"
+                                    },
+                                    "Entry"
+                                ]
+                            },
+                            {
+                                "equals": [{
+                                        "doc": "sys.createdBy.sys.id"
+                                    },
+                                    "User.current()"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "read"
+                    ],
+                    "constraint": {
+                        "and": [{
+                                "equals": [{
+                                        "doc": "sys.type"
+                                    },
+                                    "Asset"
+                                ]
+                            },
+                            {
+                                "equals": [{
+                                        "doc": "sys.createdBy.sys.id"
+                                    },
+                                    "User.current()"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "update"
+                    ],
+                    "constraint": {
+                        "and": [{
+                                "equals": [{
+                                        "doc": "sys.type"
+                                    },
+                                    "Asset"
+                                ]
+                            },
+                            {
+                                "equals": [{
+                                        "doc": "sys.createdBy.sys.id"
+                                    },
+                                    "User.current()"
+                                ]
+                            },
+                            {
+                                "paths": [{
+                                    "doc": "fields.%.%"
+                                }]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "delete"
+                    ],
+                    "constraint": {
+                        "and": [{
+                                "equals": [{
+                                        "doc": "sys.type"
+                                    },
+                                    "Asset"
+                                ]
+                            },
+                            {
+                                "equals": [{
+                                        "doc": "sys.createdBy.sys.id"
+                                    },
+                                    "User.current()"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "permissions": {
+                "ContentModel": [
+                    "read"
+                ],
+                "Settings": [],
+                "ContentDelivery": [],
+                "Environments": [],
+                "EnvironmentAliases": [],
+                "Tags": []
+            },
+            "sys": {
+                "type": "Role",
+                "id": "6aKUvrzRwAVHGp3AqD6jKY",
+                "version": 0,
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "createdAt": "2021-07-21T10:31:54Z",
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedAt": "2021-07-21T10:31:54Z"
+            }
+        },
+        {
+            "name": "Translator",
+            "description": "Allows editing of localized fields in the specified language",
+            "policies": [{
+                    "effect": "allow",
+                    "actions": [
+                        "read"
+                    ],
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Entry"
+                            ]
+                        }]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "read"
+                    ],
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Asset"
+                            ]
+                        }]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "update"
+                    ],
+                    "constraint": {
+                        "and": [{
+                                "equals": [{
+                                        "doc": "sys.type"
+                                    },
+                                    "Entry"
+                                ]
+                            },
+                            {
+                                "paths": [{
+                                    "doc": "fields.%.%"
+                                }]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "update"
+                    ],
+                    "constraint": {
+                        "and": [{
+                                "equals": [{
+                                        "doc": "sys.type"
+                                    },
+                                    "Asset"
+                                ]
+                            },
+                            {
+                                "paths": [{
+                                    "doc": "fields.%.%"
+                                }]
+                            }
+                        ]
+                    }
+                }
+            ],
+            "permissions": {
+                "ContentModel": [
+                    "read"
+                ],
+                "Settings": [],
+                "ContentDelivery": [],
+                "Environments": [],
+                "EnvironmentAliases": [],
+                "Tags": []
+            },
+            "sys": {
+                "type": "Role",
+                "id": "6aLpX9Fxx2XR9rgjrj3JFi",
+                "version": 0,
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "createdAt": "2021-07-21T10:31:54Z",
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedAt": "2021-07-21T10:31:54Z"
+            }
+        },
+        {
+            "name": "Author",
+            "description": "Allows editing of content",
+            "policies": [{
+                    "effect": "allow",
+                    "actions": [
+                        "create"
+                    ],
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Entry"
+                            ]
+                        }]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "read"
+                    ],
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Entry"
+                            ]
+                        }]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "update"
+                    ],
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Entry"
+                            ]
+                        }]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "create"
+                    ],
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Asset"
+                            ]
+                        }]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "read"
+                    ],
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Asset"
+                            ]
+                        }]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": [
+                        "update"
+                    ],
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Asset"
+                            ]
+                        }]
+                    }
+                }
+            ],
+            "permissions": {
+                "ContentModel": [
+                    "read"
+                ],
+                "Settings": [],
+                "ContentDelivery": [],
+                "Environments": [],
+                "EnvironmentAliases": [],
+                "Tags": []
+            },
+            "sys": {
+                "type": "Role",
+                "id": "6aJYaebBOc8L2q0MXLO3JW",
+                "version": 0,
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "createdAt": "2021-07-21T10:31:54Z",
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedAt": "2021-07-21T10:31:54Z"
+            }
+        },
+        {
+            "name": "Editor",
+            "description": "Allows editing, publishing and archiving of content",
+            "policies": [{
+                    "effect": "allow",
+                    "actions": "all",
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Entry"
+                            ]
+                        }]
+                    }
+                },
+                {
+                    "effect": "allow",
+                    "actions": "all",
+                    "constraint": {
+                        "and": [{
+                            "equals": [{
+                                    "doc": "sys.type"
+                                },
+                                "Asset"
+                            ]
+                        }]
+                    }
+                }
+            ],
+            "permissions": {
+                "ContentModel": [
+                    "read"
+                ],
+                "Settings": [],
+                "ContentDelivery": [],
+                "Environments": [],
+                "EnvironmentAliases": [],
+                "Tags": []
+            },
+            "sys": {
+                "type": "Role",
+                "id": "6aKrFQPNqWwxPszxbtfepK",
+                "version": 0,
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "r29ooy383j6e"
+                    }
+                },
+                "createdBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "createdAt": "2021-07-21T10:31:54Z",
+                "updatedBy": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "User",
+                        "id": "0LxJB4LBv007oHgJD7WvJN"
+                    }
+                },
+                "updatedAt": "2021-07-21T10:31:54Z"
+            }
+        }
+    ]
+}
