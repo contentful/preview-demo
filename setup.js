@@ -118,53 +118,50 @@ inquirer
             space
               .createEnvironmentWithId("demo", { name: "demo" })
               .then((environment) => {
-                       // add demo environment to API key
-            let keyID = "";
-            space
-              .getApiKeys()
-              .then((apiKey) => {
-                if (Array.isArray(apiKey.items)) {
-                  apiKey.items.forEach((element) => {
-                    let thisToken = element.accessToken;
-                    if (thisToken === accessToken) {
-                      keyID = element.sys.id;
+                // add demo environment to API key
+                let keyID = "";
+                space
+                  .getApiKeys()
+                  .then((apiKey) => {
+                    if (Array.isArray(apiKey.items)) {
+                      apiKey.items.forEach((element) => {
+                        let thisToken = element.accessToken;
+                        if (thisToken === accessToken) {
+                          keyID = element.sys.id;
+                        }
+                      });
                     }
-                  });
-                }
 
-                return { space, keyID };
-              })
-              .then(({ keyID, space }) => {
-             
-                if (keyID) {
-                  space.getApiKey(keyID).then((apiKey) => {
-                    //   console.log("apiKey",apiKey)
-                   
-                    let currentEnvironments = apiKey.environments;
-                    if(!currentEnvironments){
-                        currentEnvironments =[];
-                        
+                    return { space, keyID };
+                  })
+                  .then(({ keyID, space }) => {
+                    if (keyID) {
+                      space.getApiKey(keyID).then((apiKey) => {
+                        //   console.log("apiKey",apiKey)
+
+                        let currentEnvironments = apiKey.environments;
+                        if (!currentEnvironments) {
+                          currentEnvironments = [];
+                        }
+                        currentEnvironments.push({
+                          sys: {
+                            id: "demo",
+                            type: "Link",
+                            linkType: "Environment",
+                          },
+                        });
+                        apiKey.environments = currentEnvironments;
+                        console.log(
+                          "Demo Environment created and now has access to API key!"
+                        );
+                        return apiKey.update();
+                      });
                     }
-                    currentEnvironments.push({
-                      sys: {
-                        id: "demo",
-                        type: "Link",
-                        linkType: "Environment",
-                      },
-                    });
-                    apiKey.environments = currentEnvironments;
-                    console.log("Demo Environmen created and now has access to API key!");
-                    return apiKey.update();
-                    
-                  });
-                }
-              })
-              .catch((err0) => console.log(err0));
+                  })
+                  .catch((err0) => console.log(err0));
                 // console.log("Demo environment created", environment);
               })
               .catch((err1) => console.log("Error Creating Environment", err1));
-
-       
           })
 
           .then((_, error) => {
@@ -180,7 +177,7 @@ inquirer
       });
     } else {
       console.log(
-        `Missing Managemet token! '
+        `Missing Management token! '
             )} Please Try Again ${chalk.red("ERROR")} .`
       );
     }

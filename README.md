@@ -11,8 +11,8 @@ This is a demo app for the **Setting Up Content Previews** course on our Learnin
 
 # Step 1
 
-Create an empty space in Contentful and note the API keys(delivery, preview and management).
-From the Contentful web app go to  Space settings --> API keys....
+Create an empty space in Contentful and note the API keys (delivery, preview and management).
+From the Contentful web app go to  SPACE SETTINGS --> API keys....
 
 
 # Step 2
@@ -35,7 +35,7 @@ Open the link **[http://localhost:9009/](http://localhost:9009/)”** on your br
 # Step 6
 Setup preview on the Contentful web app, your preview **URl** should be a combination of your app's **URL** and your preview secret(from step **3**) for example; [http://localhost:9009/api/preview?secret=testing&slug={entry.fields.slug](http://localhost:9009/api/preview?secret=testing&slug=%7Bentry.fields.slug)}
 
-Go to the Contentful Webapp --> space settings --> content preview.
+Go to the Contentful Web app --> SPACE SETTINGS --> Content preview.
 
 Setup preview for the Post content model and use a url like the below;
 
