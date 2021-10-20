@@ -82,7 +82,7 @@ inquirer
         `delivery_token: '${accessToken}',`,
         `preview_token: '${previewToken}',`,
         `previewSecret: '${previewSecret}',`,
-        `environment: 'demo'`,
+        `environment: 'master'`,
         `}`,
       ].join("\n") + "\n";
 
@@ -107,74 +107,22 @@ inquirer
         spaceId: spaceId,
         managementToken: managementToken,
         content: exportFile,
-      }).then(() => {
-        const client = contentful.createClient({
-          accessToken: managementToken,
+      })
+        .then(() => {
+          console.log(
+            `All set! Make sure to give your API key access to your new demo environment. You can now run ${chalk.yellow(
+              "npm run dev"
+            )} and bring up the app in a browser ${chalk.yellow(
+              "http://localhost:9009"
+            )} .`
+          );
+        })
+        .catch((err) => {
+          console.log(
+            `An Error Occured!${chalk.yellow(err)} 
+       .`
+          );
         });
-        client
-          .getSpace(spaceId)
-          .then((space) => {
-            //   crete demo environment
-            space
-              .createEnvironmentWithId("demo", { name: "demo" })
-              .then((environment) => {
-                // add demo environment to API key
-                let keyID = "";
-                space
-                  .getApiKeys()
-                  .then((apiKey) => {
-                    if (Array.isArray(apiKey.items)) {
-                      apiKey.items.forEach((element) => {
-                        let thisToken = element.accessToken;
-                        if (thisToken === accessToken) {
-                          keyID = element.sys.id;
-                        }
-                      });
-                    }
-
-                    return { space, keyID };
-                  })
-                  .then(({ keyID, space }) => {
-                    if (keyID) {
-                      space.getApiKey(keyID).then((apiKey) => {
-                        //   console.log("apiKey",apiKey)
-
-                        let currentEnvironments = apiKey.environments;
-                        if (!currentEnvironments) {
-                          currentEnvironments = [];
-                        }
-                        currentEnvironments.push({
-                          sys: {
-                            id: "demo",
-                            type: "Link",
-                            linkType: "Environment",
-                          },
-                        });
-                        apiKey.environments = currentEnvironments;
-                        console.log(
-                          "Demo Environment created and now has access to API key!"
-                        );
-                        return apiKey.update();
-                      });
-                    }
-                  })
-                  .catch((err0) => console.log(err0));
-                // console.log("Demo environment created", environment);
-              })
-              .catch((err1) => console.log("Error Creating Environment", err1));
-          })
-
-          .then((_, error) => {
-            console.log(
-              `All set! Make sure to give your API key access to your new demo environment. You can now run ${chalk.yellow(
-                "npm run dev"
-              )} and bring up the app in a browser ${chalk.yellow(
-                "http://localhost:9009"
-              )} .`
-            );
-          })
-          .catch(console.error);
-      });
     } else {
       console.log(
         `Missing Management token! '
