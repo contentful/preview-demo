@@ -8,16 +8,9 @@ const HeroPost = (props) => {
   const fields = _.get(data, "fields");
   const imageUrl = _.get(fields, "coverImage.fields.file.url");
   const title = _.get(fields, "coverImage.fields.title");
-  const postTitle = _.get(fields, "title");
-  const postSlug = _.get(fields, "slug");
-  const postDate = _.get(fields, "date");
-  const postAuthor = _.get(fields, "author");
-  const postExcerpt = _.get(fields, "excerpt");
 
   return (
     <div>
-      {" "}
-      {/* {JSON.stringify(postAuthor)} */} {/* {imageUrl} */}{" "}
       <div className="flex flex-col mt-8 mb-8">
         <div className="flex flex-col">
           {props.slug ? (

@@ -6,6 +6,7 @@ import config from "../components/config";
 // const TEST_IMAGE_URL =
 //     "https://images.ctfassets.net/34zhepmq2vpx/4ClyFr0XGwcOiKUMyyiMKO/c47e029fa790bf3c01b8900bd6cacf87/TWD_Test_Image6.png";
 
+//prepare options for contentful createClient, change host to preview API when in preview mode
 const getOptions = (is_preview) => {
   let options = {};
 
@@ -46,15 +47,13 @@ export const getAllLocales = async () => {
 export const getAllPostsForHome = async (preview) => {
   const options = getOptions(preview);
   const contentfulClient = contentful.createClient(options);
-  
+
   let posts = await contentfulClient
     .getEntries({
       content_type: "post",
-      // locale: "de-DE",
-      // "fields.slug": "post"
     })
     .then((entries) => {
-        console.log("PAGES", entries);
+      console.log("PAGES", entries);
       let dataType = _.get(entries, "sys.type");
       let items = _.get(entries, "items");
 
@@ -79,7 +78,6 @@ export const getPreviewPostBySlug = async (slug) => {
   let posts = await contentfulClient
     .getEntries({
       content_type: "post",
-      // locale: "de-DE",
       "fields.slug": slug,
     })
     .then((entries) => {
@@ -105,8 +103,6 @@ export const getAllPostsWithSlug = async (preview) => {
   let pages = await contentfulClient
     .getEntries({
       content_type: "post",
-      // locale: "de-DE",
-      // "fields.slug": "**"
     })
     .then((entries) => {
       let items = _.get(entries, "items");
@@ -140,8 +136,6 @@ export const getPostAndMorePosts = async (slug, preview) => {
   let posts = await contentfulClient
     .getEntries({
       content_type: "post",
-      // locale: "de-DE",
-      // "fields.slug": slug
     })
     .then((entries) => {
       let items = _.get(entries, "items");

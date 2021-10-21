@@ -1,10 +1,7 @@
 import Head from "next/head";
 import _ from "lodash";
 import Layout from "../../components/layout";
-import {
-  getAllPostsWithSlug,
-  getPostAndMorePosts,
-} from "../../util/api";
+import { getAllPostsWithSlug, getPostAndMorePosts } from "../../util/api";
 import MorePosts from "../../components/morePosts";
 import CoverImage from "../../components/coverImage";
 import PostBody from "../../components/Post/postBody";
@@ -15,8 +12,6 @@ let advancedFormat = require("dayjs/plugin/advancedFormat");
 dayjs.extend(advancedFormat);
 
 const Post = (props) => {
- 
-
   const post = _.get(props, "post[0].fields");
   const preview = _.get(props, "preview");
   const morePosts = _.get(props, "morePosts");
@@ -31,7 +26,6 @@ const Post = (props) => {
   const date = _.get(post, "date");
   let postDate = dayjs(date).format(" dddd Do MMMM, YYYY");
 
-  console.log("PAGES PREVIEW 5", props);
   return (
     <div>
       <Layout preview={preview}>
@@ -44,9 +38,13 @@ const Post = (props) => {
 
         <div className="px-4 md:px-20 lg:px-40 overflow-hidden">
           {/* post header */}
-          <PostHeader title={title} date={postDate}  />
+          <PostHeader title={title} date={postDate} />
           {/* post author */}
-          <PostAuthor author={author} authorImage={authorImage} date={postDate} />
+          <PostAuthor
+            author={author}
+            authorImage={authorImage}
+            date={postDate}
+          />
           {/* cover image */}
           <div className="mb-8 md:mb-16 sm:mx-0">
             {coverImage ? (
@@ -66,10 +64,9 @@ const Post = (props) => {
           <hr />
           <br />
           {Array.isArray(morePosts)
-          ? morePosts.length > 0 && <MorePosts  posts={morePosts} />
-          : ""}
+            ? morePosts.length > 0 && <MorePosts posts={morePosts} />
+            : ""}
         </div>
-  
 
         <div className="px-40"></div>
       </Layout>
@@ -78,7 +75,6 @@ const Post = (props) => {
     </div>
   );
 };
-
 
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview);
@@ -95,7 +91,9 @@ export async function getStaticProps({ params, preview = false }) {
 export async function getStaticPaths() {
   const allPosts = await getAllPostsWithSlug();
   return {
-    paths: Array.isArray()? allPosts?.map(({ slug }) => `/posts/${slug}`) ?? [] : [] ,
+    paths: Array.isArray()
+      ? allPosts?.map(({ slug }) => `/posts/${slug}`) ?? []
+      : [],
     fallback: true,
   };
 }
