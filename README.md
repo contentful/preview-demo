@@ -36,7 +36,7 @@ Run the app with "npm run dev".
 Open the link **[http://localhost:9009/](http://localhost:9009/)** on your browser.
 
 # Step 6
-Setup preview on the Contentful web app, your preview **URL** should be a combination of your app's **URL** and your preview secret (from step **3**) for example: [http://localhost:9009/api/preview?secret=testing&slug={entry.fields.slug}](http://localhost:9009/api/preview?secret=testing&slug=%7Bentry.fields.slug)
+Setup preview on the Contentful web app, your preview **URL** should be a combination of your app's **URL** and your preview secret (from step **3**) for example: [http://localhost:9009/api/preview?secret=testing&slug={entry.fields.slug}](http://localhost:9009/api/preview?secret=testing&slug={entry.fields.slug})
 
 Go to the Contentful Web app --> SPACE SETTINGS --> Content preview.
 
