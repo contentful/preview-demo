@@ -1,10 +1,13 @@
 # Setting up Content Previews
 
-This is a demo app for the **Setting Up Content Previews** course on our Learning Center.
+This is a demo app for the [**Content Previews**](https://training.contentful.com/student/path/882023-setting-up-content-previews) course on our Learning Center.
+
+
+
 
 # Requirements
 
- - Node JS
+ - Node.js
  - Contentful API keys
 
 
@@ -16,7 +19,7 @@ From the Contentful web app go to  SPACE SETTINGS --> API keys....
 
 
 # Step 2
-After downloading this repo, open the project's location on your computer and run "npm install" from your terminal to install the dependencies.
+After downloading this repo, open the project's location on your computer and run "npm install" from your terminal window to install the dependencies.
 
 # Step 3
 After installing the dependencies run the "npm run setup" command to configure the app.
@@ -30,10 +33,10 @@ type in the keys at the prompt.
 Run the app with "npm run dev".
 
 # Step 5
-Open the link **[http://localhost:9009/](http://localhost:9009/)”** on your browser.
+Open the link **[http://localhost:9009/](http://localhost:9009/)** on your browser.
 
 # Step 6
-Setup preview on the Contentful web app, your preview **URl** should be a combination of your app's **URL** and your preview secret(from step **3**) for example; [http://localhost:9009/api/preview?secret=testing&slug={entry.fields.slug](http://localhost:9009/api/preview?secret=testing&slug=%7Bentry.fields.slug)}
+Setup preview on the Contentful web app, your preview **URL** should be a combination of your app's **URL** and your preview secret (from step **3**) for example: [http://localhost:9009/api/preview?secret=testing&slug={entry.fields.slug}](http://localhost:9009/api/preview?secret=testing&slug=%7Bentry.fields.slug)
 
 Go to the Contentful Web app --> SPACE SETTINGS --> Content preview.
 
