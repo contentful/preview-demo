@@ -10,15 +10,13 @@ const MorePosts = (props) => {
 
   return (
     <div>
-      {" "}
       <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight text-center whitespace-nowrap">
-        More Posts{" "}
-      </h2>{" "}
+        More Posts
+      </h2>
       <br />
       <hr />
       <br />
       <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32">
-        {" "}
         {Array.isArray(posts)
           ? posts.map((item, itemKey) => {
               const post = _.get(item, "fields");
@@ -28,14 +26,17 @@ const MorePosts = (props) => {
 
               return (
                 <Link key={itemKey} href={`/posts/${slug}`}>
-                  <div className="mb-4  md:mr-4 cursor-pointer" key={itemKey}>
-                    <PostPreview date={postDate} post={post} />{" "}
+                  <div
+                    className="mb-4  md:mr-10 cursor-pointer hover:scale-105 ease-in-out"
+                    key={itemKey}
+                  >
+                    <PostPreview date={postDate} post={post} />
                   </div>
                 </Link>
               );
             })
-          : ""}{" "}
-      </div>{" "}
+          : ""}
+      </div>
     </div>
   );
 };

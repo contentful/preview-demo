@@ -32,9 +32,9 @@ const PostPreview = (props) => {
         <div className="">
           {" "}
           <h3 className="text-2xl lg:text-3xl mb-5 leading-snug whitespace-nowrap">
-            <Link href={`/posts/${slug}`} className="hover:underline ">
-              {title}
-            </Link>
+            {/* <Link href={`/posts/${slug}`} className="hover:underline "> */}
+            {title}
+            {/* </Link> */}
           </h3>
         </div>
         <div className="mb-5">

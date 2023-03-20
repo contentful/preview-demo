@@ -26,13 +26,14 @@ const CoverImage = (props) => {
 
   return (
     <div className="sm:mx-0">
-      {externalUrl ? (
+      {/* {externalUrl ? (
         <Link href={`${externalUrl}`} aria-label={title}>
           {image}
         </Link>
       ) : (
         image
-      )}
+      )} */}
+      {externalUrl ? <figure aria-label={title}>{image}</figure> : image}
     </div>
   );
 };
