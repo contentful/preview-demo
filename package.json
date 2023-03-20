@@ -13,10 +13,12 @@
         "contentful-import": "^8.1.23",
         "contentful-management": "^7.30.0",
         "dayjs": "^1.10.6",
+        "eact": "^0.0.1-security",
+        "eslint-config-next": "^13.2.4",
         "inquirer": "^8.1.2",
         "next": "latest",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "devDependencies": {
         "autoprefixer": "^10.3.1",

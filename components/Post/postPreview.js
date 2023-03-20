@@ -21,7 +21,6 @@ const PostPreview = (props) => {
   const coverImage = _.get(post, "coverImage.fields.file.url");
   const content = _.get(post, "content");
 
-
   return (
     <div className="bg-blue-100 p-2 shadow-md rounded-xl">
       {/* {JSON.stringify(coverImage)} */}
@@ -33,8 +32,8 @@ const PostPreview = (props) => {
         <div className="">
           {" "}
           <h3 className="text-2xl lg:text-3xl mb-5 leading-snug whitespace-nowrap">
-            <Link href={`/posts/${slug}`}>
-              <a className="hover:underline ">{title}</a>
+            <Link href={`/posts/${slug}`} className="hover:underline ">
+              {title}
             </Link>
           </h3>
         </div>

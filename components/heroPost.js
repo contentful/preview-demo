@@ -15,13 +15,7 @@ const HeroPost = (props) => {
         <div className="flex flex-col">
           {props.slug ? (
             <Link href={`/posts/${props.slug}`}>
-              <a>
-                <CoverImage
-                  title={title}
-                  slug={props.slug}
-                  url={`${imageUrl}`}
-                />
-              </a>
+              <CoverImage title={title} slug={props.slug} url={`${imageUrl}`} />
             </Link>
           ) : (
             <CoverImage title={title} slug={props.slug} url={`${imageUrl}`} />
