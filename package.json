@@ -13,7 +13,6 @@
         "contentful-import": "^9.4.56",
         "contentful-management": "^11.27.3",
         "dayjs": "^1.11.11",
-        "eact": "^0.0.1-security",
         "eslint-config-next": "^14.2.4",
         "inquirer": "^8.2.6",
         "next": "latest",
